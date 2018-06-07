@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28-优先级之权重问题</title>
+    <style>
+        #id1 .para2{
+            color:red;
+        }
+        .para1 .para2{
+            color:green;
+        }
+        div ul li p{
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+当多个选择器混合一起使用时，通过计算判断谁的优先级最高
+怎么计算：
+ 1.id多的选择器优先级最高
+ 2.如果id个数一样，再看类选择器的个数，类选择器多的优先级高
+ 3.如果类选择器也一样多，看标签的个数，标签多的优先级高
+ 4.如果标签个数也一样，就不会往下计算，此时谁写在后面听谁的
+
+ 注意点：只有选择器是直接选中的才可以计算
+-->
+<div id="id1" class="para1">
+    <ul>
+        <li>
+            <p id="id2" class="para2">我是段落</p>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

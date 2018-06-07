@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>69-清除浮动方式4</title>
+       <style>
+                *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: #f00;
+        }
+        .box2{
+            background-color: #0f0;
+            /*clear:left;*/
+            /*margin-top: 100px;*/
+        }
+        .box1 p{
+            width: 100px;
+            background-color: #00f;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+        p{
+            float: left;
+        }
+/*设置伪元素*/
+        .box1::after{
+            /*设置添加元素的内容为空*/
+            content: '';
+            /*设置添加的元素高度为0*/
+            height: 0;
+            /*设置为块级元素*/
+            display: block;
+            /*清除浮动*/
+            clear: both;
+            /*设置元素看不见*/
+            visibility: hidden;
+        }
+           .box1{
+               /*兼容IE6*/
+               *zoom:1;
+           }
+    </style>
+</head>
+<body>
+<!--
+设置伪元素
+-->
+<div class="box1">
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+</div>
+<div class="box2">
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript类名获取元素的原理</title>
+    <script>
+        function getClass(oPar,cname){
+            var oSon=oPar.getElementsByTagName('*');
+            var result=[];
+            for(var i=0;i<oSon.length;i++){
+                if(oSon[i].className==cname){
+                    result.push(oSon[i]);
+                }
+            }
+            return result;
+        }
+
+        window.onload=function () {
+            var oUl=document.getElementById('ul1');
+            var oLi=getClass(oUl,'lili');
+            for(var i=0;i<oLi.length;i++){
+                oLi[i].style.backgroundColor='skyblue';
+            }
+        }
+
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li class="lili"></li>
+    <li></li>
+    <li class="lili"></li>
+    <li></li>
+</ul>
+</body>
+</html>

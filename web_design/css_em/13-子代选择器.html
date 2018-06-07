@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-子代选择器</title>
+    <style>
+        div>p{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<!--也可以使用id选择器类选择器，可无限叠加，选中的是所有的直接子代-->
+<div>
+    <p>我是段落</p>
+    <p>我是段落</p>
+    <ul>
+        <li>
+            <p>我是段落</p>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

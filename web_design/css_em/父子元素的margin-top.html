@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            /*如果父元素没有边框，会导致子的margin-top属性传递给父元素*/
+            /*border: 1px solid #000;*/
+            /*还可以设置overflow*/
+            /*overflow: hidden;*/
+        }
+        .son{
+            margin-top: 50px;
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

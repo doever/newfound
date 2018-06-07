@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-javascript运动框架完全版</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orangered;
+            float: left;
+            margin: 20px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv1=document.getElementById('div1');
+            var oDiv2=document.getElementById('div2');
+            var oDiv3=document.getElementById('div3');
+            var oDiv4=document.getElementById('div4');
+            oDiv1.onmouseover=function(){
+                // oDiv1.timer=null;
+                startMove(this,'height',200);
+            };
+            oDiv1.onmouseout=function(){
+                startMove(this,'height',100);
+            };
+            oDiv2.onmouseover=function(){
+                // oDiv1.timer=null;
+                startMove(this,'width',200);
+            };
+            oDiv2.onmouseout=function(){
+                startMove(this,'width',100);
+            };
+            oDiv3.onmouseover=function(){
+                // oDiv1.timer=null;
+                startMove(this,'fontSize',30);
+            };
+            oDiv3.onmouseout=function(){
+                startMove(this,'fontSize',15);
+            };
+            oDiv4.onmouseover=function(){
+                // oDiv1.timer=null;
+                startMove(this,200);
+            };
+            oDiv4.onmouseout=function(){
+                startMove(this,100);
+            };
+        };
+        // 取元素的样式，舍弃offset
+        function getStyle(obj,name){
+            if(obj.currentStyle){
+                return obj.currentStyle[name];
+            }
+            else{
+                return getComputedStyle(obj,false)[name];
+            }
+        }
+        //缓冲效果运动基础框架
+        function startMove(obj,attr,iTar){
+            clearInterval(obj.timer);
+            obj.timer=setInterval(function(){
+                var cur=parseInt(getStyle(obj,attr));
+                var speed=(iTar-cur)/6;
+                speed=speed>0?Math.ceil(speed):Math.floor(speed);
+                if(cur==iTar){
+                    clearInterval(obj.timer);
+                }
+                else{
+                    obj.style[attr]=cur+speed+'px';
+                }
+            },30)
+        }
+    </script>
+</head>
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">hellojavascript</div>
+<div id="div4">div4</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-后代选择器</title>
+    <style>
+        /*div p{*/
+            /*color:red;*/
+        /*}*/
+        /*.divclass .para1{*/
+            /*color:red;*/
+        /*}*/
+        div ul li p{
+            color:red;
+        }
+    /*选择所有的后代，可无限往后使用*/
+
+    </style>
+</head>
+<body>
+<div id="div1" class="divclass">
+    <p id="p1" class="para1">我是段落</p>
+    <p id="p2" class="para1">我是段落</p>
+    <ul>
+        <li>
+            <p>我是段落</p>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

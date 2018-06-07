@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+    <style>
+        #select1 {width: 80px;
+            height: 25px;}
+    </style>
+</head>
+<body>
+	<form>
+        <fieldset>
+            <legend>注册界面</legend>
+            <p><label>账号：<input type="text" name="username"></label></p>
+            <p><label>密码：<input type="password" name="pwd"></label></p>
+            <p><label>邮箱：<input type="email" name="email"></label></p>
+            <p><label>注册时间：<input type="date" name="createdate"></label></p>
+            <p>
+                <label>性别：<input type="radio" name="sex" value="man">男</label>
+                <label><input type="radio" name="sex" value="women">女</label>
+                <label><input type="radio" name="sex" value="roboot">保密</label>
+            </p>
+            <p>
+                <label><input type="checkbox" name="hobby" value="basketball">篮球</label>
+                <label><input type="checkbox" name="hobby" value="secort">足球</label>
+                <label><input type="checkbox" name="hobby" value="tennis">网球</label>
+            </p>
+            地址：<select id="select1" name="chosecity">
+                <optgroup label="安徽">
+                    <option>池州</option>
+                    <option>安庆</option>
+                    <option>合肥</option>
+                </optgroup>
+                <optgroup label="上海">
+                    <option>浦东</option>
+                    <option>普陀</option>
+                    <option>静安</option>
+                </optgroup>
+            </select>
+        </fieldset>
+	</form>
+</body>
+</html>

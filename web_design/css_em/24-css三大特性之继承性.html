@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24-css三大特性之继承性</title>
+    <style>
+        div{
+            color:red;
+            font-size: 30px;
+            background-color: skyblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--
+给父元素设置属性，子元素也有属性
+1.只有以color/text-/font-/line/开头的属性才能被继承
+2.不仅仅只有儿子才能继承，所有后代都可以继承
+3.继承的特殊性
+  3.1 a标签的文字颜色和下划线是不能继承的
+  3.2 h标签的文字大小是不能继承的
+
+应用场景：
+一般用于设置网页上的共性信息，例如网页的文字颜色 字体 文字大小
+-->
+<div>
+    <p>我是段落</p>
+    <h1>我是标题</h1>
+    <a href="https://www.baidu.com">百度一下</a>
+</div>
+</body>
+</html>

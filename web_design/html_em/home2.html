@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+ <!--继承了base 重写了block title-->
+{% block title %}欢迎光临首页{% endblock %}
+{% block content %}<h1 style="color:yellow;text-align:center">这里重写了content</h1>>{% endblock %}
+<p>{{ string }} em...</p>>
+{#{% block content %}#}
+{#{% include 'ad.html' %}#}
+{#这里是首页，欢迎光临#}
+{#{% endblock %}#}

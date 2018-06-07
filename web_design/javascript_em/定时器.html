@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <script>
+        window.onload=function(){
+            var oBt1=document.getElementById('but1');
+            var oBt2=document.getElementById('but2');
+            var timer=null;
+            oBt1.onclick=function () {
+                timer=setInterval(function () {
+                    alert('a');
+                },2000);
+                oBt2.onclick=function(){
+                    clearInterval(timer);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="but1" type="button" value="开启">
+<input id="but2" type="button" value="关闭">
+</body>
+</html>

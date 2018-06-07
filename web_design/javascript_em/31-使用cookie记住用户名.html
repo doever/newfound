@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31-使用cookie记住用户名</title>
+    <script>
+        function setCookie(name,value,iday){
+            var oDate=new Date();
+            oDate.setDate(oDate.getDate()+iday);
+            document.cookie=name+'='+value+';expires='+oDate;
+        }
+        function getCookie(name){
+            var arr1=document.cookie.split('; ');
+            for(var i=0;i<arr1.length;i++){
+                var arr2=arr1[i].split('=');
+                if(arr2[0]==name){
+                    return arr2[1];
+                }
+            }
+            return ''
+        }
+        window.onload=function(){
+            var oForm=document.getElementById('form1');
+            var user=document.getElementsByName('user')[0];
+            oForm.onsubmit=function(){
+                setCookie(user.name,user.value,10);
+            };
+            // var a=getCookie(user.name);
+            user.value=getCookie(user.name);
+        }
+    </script>
+</head>
+<body>
+<form id="form1" action="http://www.baidu.com">
+    <p><label>用户名:<input type="text" name="user"></label></p>
+    <p><label>密&nbsp;&nbsp;&nbsp;码:<input type="password" name="pass"></label></p>
+    <input type="submit" value="login">
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript首个子节点</title>
+    <script>
+        // 首尾父子节点
+        // firstChild、firstElementChild
+        // lastChild、lastElementChild
+        // 兄弟节点
+        // nextSibling、nextElementSibling
+        // previousSibling、previousElementSiling
+
+        window.onload=function(){
+            var oUl=document.getElementById('ul1');
+            //弹出的是文本节点，有兼容问题,在IE7中弹出的是元素节点
+            alert(oUl.firstChild);
+            //弹出的是元素节点，有兼容问题，跟上面相反
+            alert(oUl.firstElementChild);
+            alert(oUl.firstElementChild.innerHTML);
+            // 解决兼容性问题
+            if(oUl.firstElementChild){
+                oUl.firstElementChild.style.color='skyblue';
+            }
+            else{
+                oUl.firstChild.style.color='skyblue';
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ul>
+</body>
+</html>

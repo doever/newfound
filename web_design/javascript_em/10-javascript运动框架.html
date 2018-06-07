@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-javascript运动框架</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+            position: absolute;
+            left:0;
+            top:50px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBut=document.getElementById('but1');
+            var oDiv=document.getElementById('div1');
+            var timer=null;
+            oBut.onclick=function(){
+                //不清楚的每次点击都会产生一个定时器
+                clearInterval(timer);
+                var speed=1;
+               timer=setInterval(function(){
+                    if(oDiv.offsetLeft>=300){
+                        clearInterval(timer);
+                    }
+                    //此处需要加个else，不然每次点击这个定时器都会执行一次
+                   else{
+                        oDiv.style.left=oDiv.offsetLeft+speed+'px';
+                    }
+                },30)
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="but1" type="button" value="Move">
+<div id="div1"></div>
+</body>
+</html>

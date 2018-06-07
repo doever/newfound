@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07-删除dom元素</title>
+    <script>
+        window.onload=function(){
+            var oA=document.getElementsByTagName('a');
+            var oUl=document.getElementById('ul1');
+            for(var i=0;i<oA.length;i++){
+                oA[i].onclick=function(){
+                    // this.parentNode.parentNode.removeChild(this.parentNode);
+                    oUl.removeChild(this.parentNode);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li>hahah<a href="javascript:void(0);">删除</a></li>
+    <li>ha44h<a href="javascript:void(0);">删除</a></li>
+    <li>hah3e<a href="javascript:void(0);">删除</a></li>
+    <li>hahah<a href="javascript:void(0);">删除</a></li>
+</ul>
+</body>
+</html>

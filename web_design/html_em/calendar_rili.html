@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易的日历</title>
+    <link href="../css.em/calendar.css" rel="stylesheet" type="text/css">
+    <script>
+        window.onload=function () {
+            var odiv=document.getElementById('tab');
+            var oli=odiv.getElementsByTagName('li');
+            var otext=document.getElementById('text');
+            for(var i=0;i<oli.length;i++){
+                oli[i].onmouseover=function () {
+                   for(var i=0;i<oli.length;i++){
+                       oli[i].className='';
+                   }
+                   this.className='active';
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #tab {height:450px;width:380px;margin: 0 auto;}
+        li {list-style-type: none;height:100px;width:100px;float: left;border: 1px solid black;margin: 5px;background: peru}
+        h2 {text-align: center;font-family:"Times New Roman",Georgia,Serif;font-weight: bold}
+        p {text-align: center;font-family: 'Symbol';font-weight: bold}
+        #text {
+            box-sizing: border-box;
+            margin-left: 5px;
+            height:100px;
+            width: 326px;
+            border: 3px solid #000;
+            font-size: 25px;
+            line-height: 40px;
+            background-color: peru;
+            padding: 10px;
+            font-family:'微软雅黑';
+            /*clear: both;*/
+        }
+        ul {margin: 0;padding: 0;}
+        .active {background-color: red}
+        .box1{
+            height: 10px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<!--
+这里有个浮动的问题：也就是ul会全部脱标，导致#text成为标准流的第一行，发生字围现象
+1.可以通过设置#text div 的clear属性清除浮动，但是这个时候就无法设置#text的margin-top属性，就不能分隔元素
+
+2.也可以设置ul的高度清除浮动,但是企业开发一般不会去设置浮动元素的高度，原因是会脱离控制，可能只是设置宽度，让高度自适应
+
+3.还可以使用外墙法设置：如示例的box1，原理就是在两个要清除浮动的元素之间再加个块级元素，设置clear属性即可使这个增加的块级元素清除浮动，然后对这个块级元素设置height来达到margin-top的效果，但不推荐，见：67-清除浮动方式3
+-->
+<div id="tab" class="calendar">
+    <ul>
+        <li><h2>1</h2><p>JAN</p></li>
+        <li><h2>2</h2><p>FER</p></li>
+        <li><h2>3</h2><p>MAR</p></li>
+        <li><h2>4</h2><p>APR</p></li>
+        <li><h2>5</h2><p>MAY</p></li>
+        <li><h2>6</h2><p>JUN</p></li>
+        <li><h2>7</h2><p>JUL</p></li>
+        <li><h2>8</h2><p>AUG</p></li>
+        <li><h2>9</h2><p>SEP</p></li>
+        <li><h2>10</h2><p>OCT</p></li>
+        <li><h2>11</h2><p>NOV</p></li>
+        <li><h2>12</h2><p>DEC</p></li>
+    </ul>
+    <div class="box1"></div>
+    <div id="text">
+        <span>是时候展示真正的技术了是时候展示真正的技术了</span>
+    </div>
+</div>
+</body>
+</html>

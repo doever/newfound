@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17-事件基础01</title>
+    <script>
+        window.onload=function(){
+            document.onclick=function(ev){
+                // 解决兼容性
+                oEv=ev||event;
+                alert(oEv.clientX+','+oEv.clientY);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

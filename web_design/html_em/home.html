@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的家</title>
+</head>
+<body>
+<h1 style="text-align: center;color:#3daaff">welcome my home</h1>
+{#这里使用了request返回#}
+<p style="text-align:right;color:#3dccff">{{ request.user }},你好,{{ request.path }}</p>
+<hr>
+<p>begin explorer</p>
+<br>
+<!--aa链接已失效，bb链接是根据name来访问的 -->
+<a href="/add2/6/5/">aa</a>
+<a href="{% url 'add2' 4 5 %}">bb</a>
+<a href="http://www.baidu.com">baidu</a>
+<br>
+<p style="color:blue">{{ string }}</p>
+{#使用.的方式访问，而不是['name']#}
+<p>{{ my_dict.name }},{{ my_dict.work }}</p>>
+{#还可以通过循环这样访问#}
+<p>
+    {% for key,value in my_dict.items %}
+        {{ key }}:{{ value }}
+    {% endfor %}
+</p>
+<p style="color:peru">
+    {% for item in num_list %}
+        {{ item }}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+</p>
+<h2>上下文渲染器示例,每个模板都可以使用下面的两个变量</h2>
+<p>
+    DEBUG: {{ settings.DEBUG }}
+    ip: {{ ip_address }}
+</p>
+</body>
+</html>

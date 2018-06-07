@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript父节点</title>
+    <script>
+        window.onload=function(){
+            // var oUl=document.getElementById('ul1');
+            var oA=document.getElementsByTagName('a');
+            for(var i=0;i<oA.length;i++){
+                oA[i].onclick=function(){
+                    this.parentNode.style.display='none';
+
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li>12222<a href="javascript:void(0);">隐藏</a></li>
+    <li>23333<a href="javascript:void(0);">隐藏</a></li>
+    <li>34444<a href="javascript:void(0);">隐藏</a></li>
+    <li>45555<a href="javascript:void(0);">隐藏</a></li>
+</ul>
+</body>
+</html>
+<!--this.offsetParent()  定位的父元素-->

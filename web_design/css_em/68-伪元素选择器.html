@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>68-伪元素选择器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: #f00;
+        }
+        /*p{*/
+            /*width: 50px;*/
+            /*height: 50px;*/
+            /*background-color: pink;*/
+        /*}*/
+        div::before{
+            content: '爱你';
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            display: block;
+        }
+        div::after{
+            content: '么么哒';
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            display: block;
+            visibility: hidden;
+        }
+        
+        .shou{
+            height: 100px;
+            width: 100px;
+            background-color: #00f;
+            cursor : pointer;
+        }
+    </style>
+</head>
+<body>
+<!--
+什么是伪元素选择器
+伪元素选择器就是给指定标签（的内容）前面/后面添加一个子元素
+
+格式：
+    选择器：before{
+    属性名称：值;
+    }
+    给指定标签（的内容）前面添加元素
+
+    选择器：after{
+    属性名称：值;
+    给指定标签（的内容）后面添加元素
+    }
+
+    不想添加的子元素显示，可以使用visibility: hidden;
+-->
+<div id="div1">
+    <!--<p>爱你</p>-->
+    我是文字
+    <!--<p>么么哒</p>-->
+</div>
+<div class="shou"></div>
+</body>
+</html>

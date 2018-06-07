@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>77-绝对定位的参考点</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: #f00;
+        }
+        .box2{
+            height: 200px;
+            width: 200px;
+            background-color: #00f;
+            position: absolute;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .box4{
+            height: 500px;
+            width: 500px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<!--
+默认情况下，所有的绝对定位，无论有没有祖先元素，都是以body定位
+如果绝对定位有祖先元素，并且祖先元素也是定位流，那么这个绝对定位的元素就会以最近的祖先元素定位
+
+注意点：
+    1.如果一个元素绝对定位是以body为参考点，它显示是以网页首屏的宽度和高度为参考点，而不是以网页的大小为参考点
+    2.一个定位元素会忽略祖先元素的padding
+-->
+<div class="box1">
+    <div class="box2">
+        <div class="box3"></div>
+    </div>
+</div>
+<div class="box4"></div>
+</body>
+</html>

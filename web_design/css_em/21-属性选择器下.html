@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>21-属性选择器下</title>
+    <style>
+        img[alt^=abc]{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<!--
+只需要掌握css3的
+1.属性是否是以什么开头的
+[attrbure|=value] css2
+[attrbure^=value] css3
+2.属性是否是以什么结尾的
+[attrbure$=value] css3
+3.属性是否包含什么
+[attrbure~=value] css2
+[attrbure*=value] css3
+-->
+<img src="" alt="abcdef">
+<img src="" alt="abc-www">
+<img src="" alt="abc-ppp">
+<img src="" alt="defabc">
+<img src="" alt="ppp abc">
+<img src="" alt="www-abc">
+<img src="" alt="qq">
+<img src="" alt="yy">
+
+<!--<p>我是段落</p>-->
+<!--<p>我是段落</p>-->
+<!--<p>我是段落</p>-->
+<!--<p>我是段落</p>-->
+<!--<p>我是段落</p>-->
+<!--<p>我是段落</p>-->
+</body>
+</html>

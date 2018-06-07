@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-序选择器下</title>
+    <style>
+        p:nth-child(odd){
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+p:nth-child(odd)  选择同级别的奇数
+p:nth-child(even)  选择同级别的偶数
+p:nth-child(2n+0) n表示里面标签的个数
+
+P:nth-of-type(odd) 选择同级别同类型的奇数
+P:nth-of-type(even) 选择同级别同类型的偶数
+p:nth-of-type(2n+0) n表示里面标签的个数,如下有7个p  n={1.2.3.4.5.6.7}
+-->
+<h1>我是标题</h1>
+<p>我是项目</p>
+<h1>我是标题</h1>
+<p>我是项目</p>
+<p>我是项目</p>
+<h1>我是标题</h1>
+<p>我是项目</p>
+<p>我是项目</p>
+<h1>我是标题</h1>
+<p>我是项目</p>
+<p>我是项目</p>
+</body>
+</html>

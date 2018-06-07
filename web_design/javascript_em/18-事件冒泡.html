@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" onclick="alert('html');">
+<head>
+    <meta charset="UTF-8">
+    <title>18-事件冒泡</title>
+    <style>
+        div{
+            padding: 100px;
+        }
+    </style>
+</head>
+<!--事件冒泡，点最里面的div上面的div点击事件都被触发了。-->
+<body onclick="alert('body');">
+<div style="background-color: #3dccff" onclick="alert(this.style.backgroundColor);">
+    <div style="background-color: red" onclick="alert(this.style.backgroundColor);">
+        <div style="background-color: green" onclick="alert(this.style.backgroundColor);"></div>
+    </div>
+</div>
+</body>
+</html>

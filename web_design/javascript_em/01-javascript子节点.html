@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript节点</title>
+
+</head>
+<body>
+<div id="div1">
+    <ul id="ul">
+        <li class="li1">我是li</li>
+        <li class="li2">我是li</li>
+        <li class="li3">我是li</li>
+    </ul>
+</div>
+<script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var oUl=document.getElementById('ul');
+            //oUl中的三个元素节点加上四个文本节点
+            alert(oUl.childNodes.length);
+            //nodeType属性获取节点的值，文本节点值为3，元素节点值为1
+            for(var i=0;i<oUl.childNodes.length;i++){
+                alert(oUl.childNodes[i].nodeType);
+            }
+            alert('改变li元素的背景颜色');
+            //通过nodeType属性获取元素节点
+           for(var j=0;j<oUl.childNodes.length;j++){
+               if(oUl.childNodes[j].nodeType == 1){
+                   oUl.childNodes[j].style.backgroundColor='blue';
+               }
+           }
+           //上面的childNodes会有兼容性问题，可通过nodetype解决，还可以通过children解决
+           alert(oUl.children.length);
+        }
+</script>
+</body>
+</html>

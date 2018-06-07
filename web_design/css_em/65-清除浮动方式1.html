@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>65-清除浮动方式1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            /*height: 20px;*/
+            background-color: #f00;
+        }
+        .box2{
+            background-color: #0f0;
+        }
+        .box1 p{
+            width: 100px;
+            background-color: #00f;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+        p{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+预计两个div的的段落都会在各自的div中左浮动
+没有按照预计的浮动方式浮动，原因是：
+因为div没有定义高度，而浮动元素是不会撑起父元素的高度的，
+所以导致每个p全部脱标，之后全部显示在第一行
+
+企业开发中能不设置高度就不设置高度，所以不推荐使用
+-->
+<!--div.box${p.para${我是文字}*3}*2-->
+<div class="box1">
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+</div>
+<div class="box2">
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+</div>
+</body>
+</html>

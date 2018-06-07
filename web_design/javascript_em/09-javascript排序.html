@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-javascript排序</title>
+    <script>
+        window.onload=function(){
+            var oUl=document.getElementById('ul1');
+            var oLi=document.getElementsByTagName('li');
+            var oBut=document.getElementById('but1');
+            var arr=[];
+            oBut.onclick=function(){
+                for(var i=0;i<oLi.length;i++){
+                    arr[i]=oLi[i];
+                }
+                //sort里面放比较函数
+                arr.sort(function (li1,li2) {
+                    n1=parseInt(li1.innerHTML);
+                    n2=parseInt(li2.innerHTML);
+                    return n1-n2;
+                });
+                //appent方法其实是先删除一个元素，在追加到父节点的最后
+                for(var i=0;i<arr.length;i++){
+                    alert('该把'+arr[i].innerHTML+'插入到最后！');
+                    oUl.appendChild(arr[i]);
+                    }
+            };
+        }
+    </script>
+</head>
+<body>
+<input id="but1" type="button" value="排序">
+<ul id="ul1">
+    <li>58</li>
+    <li>95</li>
+    <li>20</li>
+    <li>5</li>
+</ul>
+</body>
+</html>

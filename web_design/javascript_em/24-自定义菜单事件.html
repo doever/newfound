@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>24-环境菜单事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #div1{
+            position: absolute;
+            width: 80px;
+            height: 100px;
+            background-color: #ccc;
+            border: 1px solid #000;
+            display: none;
+        }
+    </style>
+    <script>
+        document.oncontextmenu=function(ev){
+            var en=ev||event;
+            var div1=document.getElementById('div1');
+            div1.style.display='block';
+            div1.style.left=en.clientX+'px';
+            div1.style.top=en.clientY+'px';
+            return false;  //阻止默认事件,屏蔽了系统菜单
+        };
+        document.onclick=function(){
+            var div1=document.getElementById('div1');
+            div1.style.display='none';
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+    </ul>
+</div>
+<!--鼠标菜单事件-->
+</body>
+</html>

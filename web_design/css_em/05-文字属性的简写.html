@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-文字属性的简写</title>
+    <style type="text/css">
+        p {
+            /*font-style: italic;*/
+            /*font-weight: bold;*/
+            font-size: 30px;
+            /*font-family: "黑体";*/
+
+
+            /*font:italic bold 30px "黑体";*/
+        }
+
+        .p2{
+            font-family: tahoma;
+        }
+        .p3{
+            font-family: Arial;
+        }
+        .p4{
+            font-family: Symbol;
+        }
+        .p5{
+            font-family: Helvetica;
+        }
+        .p6{
+            font-family: Trebuchet MS;
+        }
+    </style>
+</head>
+<!--
+格式：font:style weight size family
+1.这种缩写有的属性可以省略style weight
+2.且style与weight位置可以交换
+3.size family 不可省略
+4.size family顺序不能颠倒，size需要写在family前面，而且写在所有属性的最后
+-->
+<body>
+<p>我是段落</p>
+<p class="p1">我是字体</p>
+<p class="p2">我是字体</p>
+<p class="p3">我是字体</p>
+<p class="p4">我是字体</p>
+<p class="p5">我是字体</p>
+<p class="p6">我是字体</p>
+<p class="p7">我是字体</p>
+<p class="p8">我是字体</p>
+<p class="p9">我是字体</p>
+<p class="p10">我是字体</p>
+</body>
+</html>

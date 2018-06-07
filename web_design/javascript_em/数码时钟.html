@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #feeab0;
+            color: black;
+            font-size: 50px;
+        }
+        div{
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function getFullNum(n){
+            if(n<10){
+                return '0'+n;
+            }
+            else{
+                return ''+n;
+            }
+        }
+        window.onload=function(){
+            var oImg=document.getElementsByTagName('img');
+            a=function () {
+                var oDate=new Date();
+                var str=getFullNum(oDate.getHours())+getFullNum(oDate.getMinutes())+getFullNum(oDate.getSeconds());
+                // var b='100';
+                // alert(b.length);
+                for (var i=0;i<=oImg.length;i++) {
+                    // str[i] == str.charAt(i)   后者可兼容IE7
+                    oImg[i].src = 'img/' + str[i] + '.png';
+                }
+            };
+           setInterval(a,1000);
+           a();
+        }
+    </script>
+</head>
+<body>
+<div>
+<img src="img/0.png" alt="">
+<img src="img/0.png" alt="">
+:
+<img src="img/0.png" alt="">
+<img src="img/0.png" alt="">
+:
+<img src="img/0.png" alt="">
+<img src="img/0.png" alt="">
+</div>
+</body>
+</html>

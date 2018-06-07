@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22-键盘移动div</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            position: absolute;
+        }
+    </style>
+    <script>
+        document.onkeydown=function (ev) {
+            var oE=ev||event;
+            var div=document.getElementById('div1');
+            if(oE.keyCode==37){
+                div.style.left=div.offsetLeft-10+'px';
+            }
+            else if(oE.keyCode==39){
+                div.style.left=div.offsetLeft+10+'px';
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

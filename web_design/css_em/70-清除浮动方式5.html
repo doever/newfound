@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>70-清除浮动方式5</title>
+    <style>
+        /*div{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: #F00;*/
+            /*!*如果内容超出标签范围，通过设置这个属性裁掉多出来的内容*!*/
+            /*overflow: hidden;*/
+        /*}*/
+
+                       *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: #f00;
+        }
+        .box2{
+            background-color: #0f0;
+        }
+        .box1 p{
+            width: 100px;
+            background-color: #00f;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+        p{
+            float: left;
+        }
+        .box1{
+            /*overflow: hidden;*/
+        }
+        .box1{
+            *zoom:1;
+        }
+    </style>
+</head>
+<body>
+<!--
+overflow作用
+    1.如果内容超出标签范围，通过设置这个属性裁掉多出来的内容
+    2.清除浮动,效果同内墙法，可以设置第一个盒子的margin-bottom，可以设置第二个盒子的margin-top，可以撑起高度
+    3.解决：父子元素的margin-top传递问题
+
+注意点：
+    在IE6中无效
+-->
+<!--<div>我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>-->
+
+<div class="box1">
+    <p class="para1">我是文字1</p>
+    <p class="para1">
+        我是文字1
+    </p>
+    <p class="para1">我是文字1</p>
+</div>
+<div class="box2">
+    <p class="para2">我是文字2</p>
+    <p class="PARA2">我是文字2</p>
+    <p class="PARA2">我是文字2</p>
+</div>
+
+<!--div.box.hezi${我是盒子}*2>div.box2-->
+<!--ul.menu>li*6>a[href=#]{HTML}-->
+</body>
+</html>

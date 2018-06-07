@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-插入dom元素</title>
+    <script>
+        window.onload=function(){
+            var oBu1=document.getElementById('bu1');
+            var oUl=document.getElementById('ul1');
+            var allli=document.getElementsByTagName('li');
+            var oT1=document.getElementById('txt');
+            oBu1.onclick=function(){
+                var oLi=document.createElement('li');
+                oLi.innerHTML=oT1.value;
+                //插入什么，在什么之前插入
+                //在iE会有兼容性问题，因为没有第一个元素
+                if(allli.length>0){
+                oUl.insertBefore(oLi,allli[0]);
+                }
+                else{
+                    oUl.appendChild(oLi);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txt">
+<button id="bu1">创建</button>
+<ul id="ul1"></ul>
+</body>
+</html>

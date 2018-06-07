@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>75-定位流</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+        }
+        .box1{
+            background-color: #f00;
+        }
+        .box2{
+            background-color: #0f0;
+            /*相对定位*/
+            position: relative;
+            top: 20px;
+            left: 20px;
+            /*注意注释下面看变化*/
+            margin-top: 20px;
+
+        }
+        .box3{
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.定位流分类
+    1.相对定位
+    2.绝对定位
+    3.固定定位
+    4.静态定位
+
+什么是相对定位？
+相对定位就是相对自己以前在标准流中的位置移动
+注意点：
+    1相对定位是不脱离标准流的，会继续在标准流中占用一份空间
+    2在相对定位中同一个方向的属性只能有一个
+    3由于相对定位是不脱离标准流的，所以在相对定位中是区分块级元素/行内元素/行内块级元素
+    4相对定位是不脱离标准流的，所以当给相对定位的设置margin，padding等属性的时候会影响标准流的布局
+        此时设置的margin，padding是相对于移动前的位置的
+
+
+相对定位运用场景
+    用于微调元素
+    配合后面的绝对定位使用
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

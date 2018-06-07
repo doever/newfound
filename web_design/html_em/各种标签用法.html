@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>hellohtml</title>
+{#<base href="D:\cuicui\" target="_blank">#}
+{#<link rel="stylesheet" type="text/css" href="styles.css"><!--link外部css文件渲染-->#}
+<meta name="description" content="freebook"><!--description用来告诉搜索引擎你的网站主要内容-->
+<meta name="author" content="faceman">
+<meta name="keywords" content="home"><!--keywords用来告诉搜索引擎你网页的关键字是什么-->
+<meta http-equiv="refresh" content="1800,url=http://www.baidu.com/"><!--1800s后刷新网页指向定义的url-->
+<meta http-equiv="Pragma"content="no-cache"> <!--禁止禁止浏览器从本地计算机的缓存中访问页面内容-->
+<meta charset="UTF-8">
+{#<script src="D:/js/test.js"></script>#}
+<style type="text/css">
+    h1{color:blue;align:center}
+    p{color:blue;font-family:sans-serif}
+</style>
+</head>
+<body>
+<h1 style="font-family:arial;color:#CCFFFF;text-align:center;font-size:50px;">myhome</h1>
+<p><b><big><em>再回首，</em></big></b></p>
+<p dir="rtl"><i>。昨日不在风依旧</i></p>
+<br>
+<!--target=_blank表示打开一个新窗口，=_top表示跳出框架--> 
+<a href="F:\360云盘备份\01ipone图片\2.jpg" style="text-decoration:none;" target="_blank">哆啦A梦的任意门</a>
+<a href="F:\360云盘备份\01ipone图片\1.jpg" style="text-decoration:none;" target="_self">哆啦A梦的任意门</a>
+<a href="#jump">jump因为base失效</a>
+<hr>
+<img src="D:/cuicui/c.jpg" width="600" height="800" usemap="#face" >
+<map name="#face">
+   <area shape="rect" coords="0,0,600,400" href="D:/cuicui/d.jpg">
+   <area shape="rect" coords="0,400,600,800" href="D:/cuicui/f.jpg">
+</map>
+<!--不写路径也能访问，因为base中定义了默认路径，base中定义的target影响全局-->
+<a href="D:/cuicui/g.jpg" target="_self"><img src="D:/cuicui/b.jpg" width="600" height="800" ></a>
+<br>
+<p style="color:#66CCCC;font-size:30px"><a id="jump">hello，chilo,begin explorer!!!</a></p>
+<hr>
+<h3 style="color:#66CCCC">列表</h3>
+<table  style="color:#66CCCC;font-size:20PX" bordercolor="white" border="1" cellpadding="10" cellspacing="1">
+	<tr>
+		<td>周杰伦</td>
+		<td>告白气球</td>
+		<td>夜曲</td>
+	</tr>
+	<tr>
+		<td>陈奕迅</td>
+		<td>爱情转移</td>
+		<td>十年</td>
+	</tr>
+</table>
+<br>
+<hr>
+<div>
+	<div style="width:683px;height:120px;float:left">
+		<h3 style="color:#66CCCC">待办事项</h3>
+		<ul style="list-style-type:circle;font-size:20px;color:#66CCCC">
+			<li style="float: left">python爬虫</li>
+			<li style="float: left">javaweb实战</li>
+		</ul>
+	</div>
+	<div style="width:650px;height:120px;float:left">
+		<h3 style="color:#66FFFF">一无所有</h3>
+		<ol type="A" style="color:#33DDDD;font-size:20px">
+			<li><a href="https://detail.tmall.com/item.htm?id=545381577849&ali_refid=a3_430583_1006:1125317433:N:%E5%A4%A9%E6%A2%AD%E5%8A%9B%E6%B4%9B%E5%85%8B%E6%89%8B%E8%A1%A8:6524559e5012ea9a41bfc713bd488aa4&ali_trackid=1_6524559e5012ea9a41bfc713bd488aa4&spm=a230r.1.14.1" style="text-decoration:none;" >天梭</a></li>
+			<li><a href="https://detail.tmall.com/item.htm?spm=a230r.1.14.6.7d6bc984fgp5UW&id=540277888311&cm_id=140105335569ed55e27b&abbucket=2&sku_properties=1627207:28341" style="text-decoration:none;">漫步者</a></li>
+		</ol>
+	</div>
+<div>
+<hr>
+<script>
+	function forgetps()
+	{
+		alert("跳转");
+	}
+</script>
+<script>
+	function checkname()
+	{
+		alert("用户名或密码错误");
+	}
+</script>
+<div style="color=#66CCCC,font-family:arial;font-size:20px">
+	<div style="width:333px;height:120px;float:left">
+		<form action="D:\cuicui\b.jpg" style="color:green">
+			username:<input type="text" name="user" value="输入用户名" 
+					onfocus="if(value=='输入用户名'){value=''}"
+					onblur="if(value==''){value='输入用户名'}"/><br>
+			password:<input type="password" name="password"/><br><br>
+					<input type="button" onclick="checkname()" value="登录"/>
+					<input type="submit" onclick="forgetps()" value="注册">
+					<button type="button">忘记密码</button>
+					<input type="button" onclick="checkname()" value="提交">
+					<input type="reset">
+			<!--自定义的图片按钮-->
+					<input type="image" src="sss.jpg">
+		</form>
+	</div>
+	<div style="width:333px;height:150px;float:left">
+		<p style="color:#55CCFF;font-size:20px">今晚吃什么？</p>
+		<form action="" style="color:green;font-size:20px">
+			<label><input type="radio" name="anwer" value="金牌煲仔饭"></label>金牌煲仔饭<br>
+			<input type="radio" name="anwer" value="过桥米线">过桥米线<br>
+			<input type="radio" name="anwer" value="重庆火锅">重庆火锅
+		</form>	
+	</div>
+	<div style="width:333px;height:150px;float:left;font-size:20px">
+		<div style="width:100px;height:20px;float:top" >
+		<p>请选择语言</p>
+		</div>
+		<div style="width:50px;height:50px;float:left">
+		<form action="">
+			<select name="lang">
+				<option value="">中文</option>
+				<option value="">English</option>
+				<option value="El español">El español</option>
+				<option value="عربي ">عربي </option>
+
+			</select>
+		</form>
+		</div>
+		<div style="width:1px;height:50px;float:left">
+		<textarea rows="5" cols="30">
+		</textarea>
+		</div>
+	</div>
+	<div style="width:333px;height:150px;float:left">
+	</div>
+</div>
+<br><br>
+<hr><br>
+<div style="color:red">
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+<input type="range" id="a" value="50">100
++<input type="number" id="b" value="50">
+=<output name="x" for="a b"></output>
+</form>
+</div>
+<br>
+<hr>
+	<form>
+		<select name="chosecity">
+			<optgroup label="安徽">
+				<option>池州</option>
+				<option>安庆</option>
+				<option>合肥</option>
+			</optgroup>
+			<optgroup label="上海">
+				<option>浦东</option>
+				<option>普陀</option>
+				<option>静安</option>
+			</optgroup>
+		</select>
+	</form>
+</body>
+</html>

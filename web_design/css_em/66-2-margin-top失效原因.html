@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>67-margin-top失效的原因</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            border: 1px solid #000;
+        }
+        .box1{
+            background-color: #f00;
+        }
+        .box2{
+            background-color: #0f0;
+            clear:left;
+            margin-top: 100px;
+        }
+        .box1 p{
+            width: 100px;
+            background-color: #00f;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+        p{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+margin-top失效的原因，请看父子元素的margin-top
+
+所以只要给父元素加上border就可生效
+-->
+<!--div.box${p.para${我是文字}*3}*2-->
+<div class="box1">
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+</div>
+<div class="box2">
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>48-css盒子模型</title>
+    <style>
+        span,a,b,strong{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 6px solid #000;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--
+什么css盒子模型?
+宽度高度  指定存放内容的区域
+内边距：填充物
+边框：盒子本身
+外边距：盒子与盒子间距
+
+
+1.内容的宽度和高度
+盒子的蓝色区域，就是height，width属性设置的宽度高度
+2.元素的宽度和高度
+元素的宽度=左边框+左内边距+width+右边框+右内边距
+元素高度 同理
+
+3.元素的空间宽度高度
+元素的空间宽度=左外边距+左边框+左内边距+width+右边框+右内边距+右外边距
+-->
+<span>我是span</span>
+<a href="">我是链接</a>
+<b>我是加粗</b>
+<strong>我是强调</strong>
+</body>
+</html>

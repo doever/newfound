@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-javascript实现jquery toggle效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 200px;
+            background-color: peru;
+            position: absolute;
+            left: -100px;
+            top:100px;
+        }
+        /*行内元素设置了position属性或float属性后属性默认变成inline-block，所以可以设置宽高*/
+        span{
+            width: 20px;
+            height: 40px;
+            background-color: deepskyblue;
+            position: absolute;
+            top: 65px;
+            right:-20px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var oSpan=oDiv.children[0];
+            var timer=null;
+            oDiv.onmouseout=function(){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    if(oDiv.offsetLeft>=-100){
+                        oDiv.style.left=oDiv.offsetLeft-5+'px';
+                    }
+                    else{
+                        clearInterval(timer);
+                    }
+                },30);
+            };
+
+            oDiv.onmouseover=function(){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    if(oDiv.offsetLeft<=0){
+                        oDiv.style.left=oDiv.offsetLeft+5+'px';
+                    }
+                    else{
+                        clearInterval(timer);
+                    }
+                },30);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <span>分享</span>
+</div>
+</body>
+</html>

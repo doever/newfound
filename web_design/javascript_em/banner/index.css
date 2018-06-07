@@ -1,0 +1,145 @@
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            width: 100%;
+            height: 64px;
+            background-color: #3a3a3a;
+            overflow: hidden;
+
+        }
+        #header .logo{
+            height: 64px;
+            float: left;
+        }
+        #header .logo a{
+            margin-top: 8px;
+            margin-left: 30px;
+            width: 140px;
+            height: 49px;
+            display: inline-block;
+            background:url("https://www.xfz.cn/static/build/images/logo.png") no-repeat;
+        }
+        #header .nav{
+            height: 64px;
+            float: left;
+        }
+        #header .nav ul{
+            margin-left: 80px;
+            overflow: hidden;
+        }
+        #header .nav ul li{
+            line-height: 64px;
+            height: 64px;
+            list-style: none;
+            float: left;
+            margin:0 15px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #header .nav ul li:hover{
+            border-bottom: 5px solid blue;
+        }
+        #header .nav ul li a{
+            color:#FFF;
+            text-decoration: none;
+        }
+        #header .auth{
+            float: right;
+            height: 100%;
+            margin-right: 30px;
+            color: #FFF;
+        }
+        #header .auth a{
+            line-height: 64px;
+            display: inline-block;
+            text-decoration: none;
+            color: #FFF;
+        }
+        .main{
+            margin-top: 20px;
+            width: 100%;
+            /*height: 1000px;*/
+            background-color: darkcyan;
+            overflow: hidden;
+        }
+        .main .wrapper{
+
+            float: left;
+            width: 798px;
+            height: 500px;
+            background-color: #ff0;
+        }
+        .main .wrapper .banner-group{
+            width: 100%;
+            height: 202px;
+            position: relative;
+            overflow: hidden;
+        }
+        .main .wrapper .banner-group ul{
+            /*width: 3192px;*/
+            position: absolute;
+            left: 0;
+            /*overflow: hidden;*/
+        }
+        .main .wrapper .banner-group ul li{
+            width: 798px;
+            height: 202px;
+            float: left;
+            list-style: none;
+        }
+        .main .wrapper .banner-group ul li img{
+            width: 798px;
+            height: 202px;
+        }
+        .main .wrapper .banner-group .arrow{
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            position: absolute;
+            font-size: 80px;
+            color: #FFF;
+            /*width: 20px;*/
+            /*height: 50px;*/
+            display: none;
+            cursor: pointer;
+            top: 50%;
+            margin-top: -45px;
+        }
+        .main .wrapper .banner-group .left-arrow{
+            left: 30px;
+        }
+        .main .wrapper .banner-group .right-arrow{
+            right: 30px;
+        }
+        .main .wrapper .banner-group .page-control-group{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+            /*overflow: hidden;*/
+        }
+        .main .wrapper .banner-group .page-control-group .page-control{
+            width: 160px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .main .wrapper .banner-group .page-control-group .page-control li{
+            height: 12px;
+            width: 12px;
+            float: left;
+            border: 1px solid #FFF;
+            box-sizing: border-box;
+            border-radius: 50%;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+        .main .wrapper .banner-group .page-control-group .page-control li.active{
+            background-color: #fff;
+        }
+        .main .sidebar-wrapper{
+            float: right;
+            width: 365px;
+            height: 500px;
+            background-color: #00F;
+        }

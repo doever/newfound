@@ -1,0 +1,32 @@
+<!--datalist 不被大多数浏览器支持-->
+<!--url email number date color 大多数浏览器都不支持，是用来校验数据的-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datalist</title>
+</head>
+<body>
+<form action="">
+    选择车型：<input type="text" list="cars">
+    <datalist id="cars">
+        <option>宝马</option>
+        <option>宝马320</option>
+        <option>宝马520</option>
+        <option>宝马525</option>
+        <option>宝马X1</option>
+        <option>宝马X3</option>
+    </datalist>
+    <br>
+    <br>
+    <hr>
+    <label>邮箱：<input type="email"></label>
+    <label>电话号码：<input type="number"></label>
+    <label>域名：<input type="url"></label>
+    <label>时间：<input type="date"></label>
+    <label>颜色：<input type="color"></label>
+    <label><input type="submit"></label>
+</form>
+</body>
+</html>

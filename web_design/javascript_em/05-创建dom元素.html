@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-创建dom元素</title>
+    <script>
+        window.onload=function(){
+            var oBu1=document.getElementById('bu1');
+            var oUl=document.getElementById('ul1');
+            var oT1=document.getElementById('txt');
+            oBu1.onclick=function(){
+                var oLi=document.createElement('li');
+                oLi.innerHTML=oT1.value;
+                //在父级后面添加子节点
+                oUl.appendChild(oLi);
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txt">
+<button id="bu1">创建</button>
+<ul id="ul1"></ul>
+</body>
+</html>

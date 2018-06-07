@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>....</title>
+        <style>
+        #p1{
+            color:pink;
+            font-size: 50px;
+        }
+        .para{
+            color:purple !important;
+            font-size: 10px;
+        }
+        p{
+            color:skyblue;
+        }
+        div{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+import用于提升某个直接选中的选择器的某个属性的优先级，可以将被指定的属性的优先级提升最高
+注意必须是直接选中
+通配符选中的标签也是直接选中的
+只能提升被important修饰的属性
+-->
+<div>
+    <ul>
+        <li>
+             <p id="p1" class="para">我是段落</p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

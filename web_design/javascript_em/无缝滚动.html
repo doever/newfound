@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滚动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 800px;
+            height: 100px;
+            background-color: #f00;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        ul li{
+            float: left;
+            list-style: none;
+        }
+        li img{
+            width: 200px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var oDiv=document.getElementById('div1');
+            var oUi=oDiv.getElementsByTagName('ul')[0];
+            var oLi=oUi.getElementsByTagName('li');
+            oUi.innerHTML=oUi.innerHTML+oUi.innerHTML;
+            oUi.style.width=oLi[0].offsetWidth*oLi.length+'px';
+            setInterval(function () {
+                //如果已经滚到一半，迅速拉回
+                if(oUi.offsetLeft<-oUi.offsetWidth/2){
+                    oUi.style.left=0;
+                }
+                oUi.style.left=oUi.offsetLeft-2+'px';
+            },30)
+        };
+    </script>
+</head>
+<body>
+<div id="div1">
+    <ul>
+        <li><img src="img/01.jpg" alt=""></li>
+        <li><img src="img/02.jpg" alt=""></li>
+        <li><img src="img/03.jpg" alt=""></li>
+        <li><img src="img/04.jpg" alt=""></li>
+    </ul>
+</div>
+</body>
+</html>

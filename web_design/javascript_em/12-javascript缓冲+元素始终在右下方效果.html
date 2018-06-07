@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-javascript缓冲+元素始终在右下方效果</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        div{
+            width: 100px;
+            height: 150px;
+            background-color: #00f;
+            position: absolute;
+            right:0;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        window.onscroll=function(){
+            var oDiv=document.getElementById('oDiv');
+            var scrolltop=document.documentElement.scrollTop||document.body.scrollTop;
+            oDiv.style.top=document.documentElement.clientHeight-oDiv.offsetHeight+scrolltop+'px';
+        };
+    </script>
+</head>
+<body>
+<div id="oDiv"></div>
+</body>
+</html>

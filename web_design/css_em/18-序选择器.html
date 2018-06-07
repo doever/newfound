@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-序选择器</title>
+    <style>
+        /*同级别的第几个*/
+        /*p:first-child{*/
+            /*color:red;*/
+        /*}*/
+        /*p:first-of-type{*/
+            /*color:red;*/
+        /*}*/
+        /*p:nth-child(3){*/
+            /*color:red;*/
+        /*}*/
+        /*p:nth-of-type(2){*/
+            /*color:red;*/
+        /*}*/
+        p:nth-last-child(2){
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+<!--css3新增的代表性选择器
+1.同级别的第几个
+first-child选择同级别的第一个标签
+last-child选择同级别的最后一个一个标签
+nth-child(n)选择同级别的第n个标签
+nth-last-child(n)选择同级别的倒数n个标签
+only-child 选择父元素的唯一元素
+注意点：不区分类型，即如果在 我是段落1 前加上<h1>标题</h1>，则无法给我是段落1改变颜色，因为他不是第一个
+2.同类型的第几个(同级别同类型的第几个)
+first-of-type:选择同级别同类型的第一个
+last-of-type:选择同级别同类型的最后一个
+nth-of-type(n):选择同级别同类型的第n一个
+nth-last-of-type(n):选择同级别同类型的倒数n一个
+only-of-type：选择择父元素唯一类型的某个元素
+-->
+
+<p>我是段落1</p>
+<p>我是段落2</p>
+    <div>
+        <p>我是段落3</p>
+        <p>我是段落4</p>
+        <p>我是段落5</p>
+        <p>我是段落6</p>
+        <p>我是段落7</p>
+    </div>
+</body>
+</html>

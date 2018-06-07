@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>get_someinfo</title>
+    <meta charset="utf-8">
+<script type="text/javascript">
+function showCustomer(str)
+{
+var xmlhttp;
+if (str=="")
+  {
+  document.getElementById("txtHint").innerHTML="";
+  return;
+  }
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/getcustomer/?q="+str,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<form action="" style="margin-top:15px;">
+    <label>
+        <select name="customers" onchange="showCustomer(this.value)" style="font-family:Verdana, Arial, Helvetica, sans-serif;">
+            <option value="cuicui">翠翠</option>
+            <option value="chilo">陈龙</option>
+            <option value="kakaxi">卡卡西</option>
+        </select>
+    </label>
+</form>
+<br>
+<div id="txtHint">显示放回信息....</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-拖拽</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var div=document.getElementById('div1');
+            disx='';
+            dixy='';
+            //计算鼠标的位置给div左上角顶点的位置
+            div.onmousedown=function(ev){
+                var en=ev||event;
+                disx=en.clientX-div.offsetLeft;
+                disy=en.clientY-div.offsetTop;
+
+                //鼠标移动事件需要放在鼠标按下事件里面，才能正确的响应操作
+                //事件加在document上面是为了不让鼠标快速移动脱离div后无法对div事件响应
+                document.onmousemove=function(ev){
+                    var en=ev||event;
+                    l=en.clientX-disx;
+                    t=en.clientY-disy;
+                    if(l<0){
+                        l=0;
+                    }
+                    else if(l>document.documentElement.clientWidth-div.offsetWidth){
+                        l=document.documentElement.clientWidth-div.offsetWidth;
+                    }
+                    if(t<0){
+                        t=0;
+                    }
+                    div.style.left=l+'px';
+                    div.style.top=t+'px';
+                };
+                document.onmouseup=function(){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                };
+                //解决事件覆盖文字被选中的问题
+                return false;
+            };
+
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

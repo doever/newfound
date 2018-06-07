@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>31-css显示模式转化</title>
+    <style>
+        div{
+            display:inline;
+            background: red;
+            width: 100px;
+            height: 300px;
+        }
+        span{
+            display: block;
+            width: 200px;
+            background: #0000FF;
+            height: 200px;
+            text-align: center;
+        }
+        .cc{
+            color:blue;
+            width: 200px;
+            height: 200px;
+            background: #00FFFF;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<!--
+display:
+    block:块级      独占 可设置宽高
+    inline:行内     不独占 不可设置宽高
+    inline-block:行内块级  不独占 可设置宽高
+-->
+
+<div>我是div</div>
+<div>我是div</div>
+<span>我是一个Span</span>
+<span>我是一个Span</span>
+<p class="cc">我是一个段落</p>
+<b class="cc">我是加粗</b>
+</body>
+</html>

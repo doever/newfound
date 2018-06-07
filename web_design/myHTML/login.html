@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>用户登录</title>
+<script type="text/javascript" src="static/jquery-3.3.1.js" ></script>
+<style>
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,
+        legend,input,textarea,p,blockquote,th,td{
+            margin:0;
+            padding:0;
+        }
+    body{
+        background:url(images/sunrise2.jpg) no-repeat;
+        background-size:cover;
+}
+.login-form{
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border: 1px solid #000;
+    background:#000;
+    border-radius: 5px;
+    width:250px;
+    height:300px;
+    padding:5px;
+    filter:alpha(Opacity=60);
+    -moz-opacity:0.7;
+    opacity: 0.7;
+}
+.login-logo{
+    box-sizing: border-box;
+    width: 200px;
+    height: 36px;
+    background-color: #8e7d6c;
+    margin: 20px auto;
+    border: 1px solid #8e7d6c;
+    border-radius: 5px;
+    color:white;
+    line-height: 36px;
+    text-align: center;
+}
+
+.login-form .user-input{
+    box-sizing: border-box;
+    width: 200px;
+    height: 36px;
+    background-color: #8e7d6c;
+    margin: 20px auto;
+    border: 1px solid #8e7d6c;
+    border-radius: 5px;
+    color:white;
+    line-height: 36px;
+}
+.login-form .user-input input{
+    width: 150px;
+    height: 25px;
+    border:none;
+    outline:none;
+    background-color: #8e7d6c;
+    text-indent: 5px;
+    color:white;
+}
+.login-form .user-input img{
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin: 5px 5px;
+    /*border-right: 2px solid white;*/
+
+}
+.login-form .login-in input{
+    box-sizing: border-box;
+    width: 65px;
+    height: 30px;
+    border: 1px solid #8e7d6c;
+    border-radius: 5px;
+    margin-left: 35px;
+    outline:none;
+    cursor: pointer;
+    font: normal lighter 15px '宋体';
+    letter-spacing:12px;
+    line-height: 30px;
+    text-indent: 10px;
+    color:white;
+    background-color: #8e7d6c;
+}
+/* CSS注释说明：这里对CSS代码换行是为了让代码在此我要中显示完整，换行后CSS效果不受影响 */
+</style>
+</head>
+
+<body>
+<div class="login-form">
+    <div class="login-logo">CMS系统登录</div>
+    <div class="user-input">
+        <img src="images/user.png" alt="">
+        <input type="text">
+    </div>
+    <div class="user-input">
+        <img src="images/password2.png" alt="">
+        <input type="password">
+    </div>
+    <div class="login-in">
+        <input type="submit" value="登录">
+        <input type="button" value="注册">
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('input').on({
+            mouseover:function(){
+                $(this).css({'borderWidth':'2px','borderColor':'skyblue'});
+            }
+        ,
+            mouseout:function() {
+                $(this).css({'borderWidth':'1px','borderColor':'#8e7d6c'});
+            }
+        })
+    })
+</script>
+</body>
+</html>

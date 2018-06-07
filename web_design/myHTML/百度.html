@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度</title>
+    <style type="text/css">·····························································一下是CSS
+    #wrap{
+        width: 150px;height: 200px;
+        /*background: rgb(211,211,211);*/
+        margin: 200px auto 0px;
+        text-align: center;
+        position: relative;
+        background: rgb(225,225,225);
+    }
+    a{
+        color:white;
+        display: inline-block;
+        width: 150px;height: 20px;
+
+    }
+
+    .one{
+        position: absolute;
+        left: 70px;top: 14px;
+        color: white;
+
+    }
+    #div1{
+        width: 80px;height:81px;
+        margin: 3px auto 0px;
+        background: white;
+
+    }
+    #div1 a{
+        display: inline-block;
+        width:78px;
+        height: 25px;
+        color:black;
+        font-size: 15px;
+        line-height: 25px;
+        text-decoration: none;
+        position: relative;
+        margin: 1px 1px;
+        z-index: 1;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">·············································································HTML内容
+        <a href="#" id="set">设置</a>
+        <span class="one">♦</span>
+        <div id="div1">
+            <a href="#" class="two">搜索设置</a>
+            <a href="#" class="two">高级搜索</a>
+            <a href="#" class="two">搜索历史</a>
+        </div>
+    </div>
+    <script type="text/javascript">······································································一下是JS
+
+    var set = document.getElementById('set');
+    var div1 = document.getElementById('div1');
+    var one = document.getElementsByClassName('one');
+    var two = document.getElementsByClassName('two');
+    one[0].style.display = 'none';
+    div1.style.display = 'none';
+    set.onmouseover = function (){
+        one[0].style.display = 'block';
+        div1.style.display = 'block';
+    }
+    set.onmouseout = function (){
+        one[0].style.display = 'none';
+        div1.style.display = 'none';
+    }
+    two[0].onmouseover = function(){
+        two[0].style.background = 'rgb(57,139,251)';
+    }
+    two[1].onmouseover = function(){
+        two[1].style.background = 'rgb(57,139,251)';
+    }
+    two[2].onmouseover = function(){
+        two[2].style.background = 'rgb(57,139,251)';
+    }
+    two[0].onmouseout = function(){
+        two[0].style.background = 'white';
+    }
+    two[1].onmouseout = function(){
+        two[1].style.background = 'white';
+    }
+    two[2].onmouseout = function(){
+        two[2].style.background = 'white';
+    }
+
+    div1.onmouseover = function(){
+        one[0].style.display = 'block';
+        div1.style.display = 'block';
+    }
+    div1.onmouseout = function(){
+        one[0].style.display = 'none';
+        div1.style.display = 'none';
+    }
+    one[0].onmouseover = function(){
+        one[0].style.display = 'block';
+        div1.style.display = 'block';
+    }
+    one[0].onmouseout = function(){
+        one[0].style.display = 'none';
+        div1.style.display = 'none';
+    }
+    </script>
+</body>
+</html>

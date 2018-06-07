@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32-正则表达式</title>
+    <script>
+        window.onload=function(){
+            var oTxt1=document.getElementById('txt1');
+            var oTxt2=document.getElementById('txt2');
+            var oBut=document.getElementById('but');
+            oBut.onclick=function(){
+                // var re=/<[^<>]+>/g;
+                // var re=/<.+?>/g;
+                var re=/(0\d{2,3}-)?[1-9]\d{7}(-\d{1,5})?/g;
+                oTxt2.value=oTxt1.value.match(re);
+            }
+        }
+    </script>
+</head>
+<body>
+<textarea id="txt1" cols="80" rows="10" style="display: block;"></textarea>
+<input id="but" type="button" value="trans">
+<textarea id="txt2" cols="80" rows="10" style="display: block;"></textarea>
+
+</body>
+</html>

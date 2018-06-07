@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>80-手风琴效果</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            width: 960px;
+            height: 400px;
+            margin: 100px auto;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+        ul li{
+            list-style: none;
+            height: 400px;
+            width: 160px;
+            float: left;
+            background-color: #f00;
+            transition-property: width;
+            transition-duration: 0.8s;
+        }
+        ul:hover li{
+            width: 100px;
+        }
+        ul li:hover{
+            width: 460px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="an.jpg" alt=""></li>
+    <li><img src="ey.jpg" alt=""></li>
+    <li><img src="js.jpg" alt=""></li>
+    <li><img src="lq.jpg" alt=""></li>
+    <li><img src="mw.jpg" alt=""></li>
+    <li><img src="tm.jpg" alt=""></li>
+</ul>
+</body>
+</html>

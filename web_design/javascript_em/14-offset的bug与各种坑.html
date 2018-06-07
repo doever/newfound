@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            border: 1px solid #000;
+        }
+    </style>
+    <script>
+        // oDiv.style.width这个取得是行间的样式，写在样式表的取不出来
+        //这也是一直以来使用offset的，而不直接使用属性的原因;  offset取得是盒模型的大小
+        // 可以使用getStyle取出样式表的样式
+        function getStyle(obj,name){
+            //解决兼容性问题
+            if(obj.currentStyle){
+                return obj.currentStyle[name];
+            }
+            else{
+                return getComputedStyle(obj,false)[name];
+            }
+        }
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            //需要使用引号，因为函数使用中括号取值
+            // alert(getStyle(oDiv,'width'));
+            setInterval(function(){
+                    //此处需要一个parseInt，取出来的值不是一个数字，无法进行运算
+                    oDiv.style.width=parseInt(getStyle(oDiv,'width'))-1+'px';
+            },30)
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

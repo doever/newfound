@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>27-事件绑定</title>
+    <script>
+    window.onload=function(){
+        var but1=document.getElementById('but1');
+        but1.addEventListener('click',function(){
+            alert('a');
+        },false);
+        but1.addEventListener('click',function(){
+            alert('b');
+        },false)
+    }
+    </script>
+</head>
+<body>
+<input id="but1" type="button" value="anniu">
+</body>
+</html>

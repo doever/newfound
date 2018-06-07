@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26-css三大特性之优先级</title>
+    <style>
+        #p1{
+            color:pink;
+        }
+        .para{
+            color:purple;
+        }
+        p{
+            color:skyblue;
+        }
+        div{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+<!--
+当多个选择器选择同一标签，并且设置同一属性，如何层叠由优先级决定
+优先级判断的三种方式：
+最简单的一句话就是，离得近优先级大，选的越精准优先级越高
+id>类>标签>通配符>继承>浏览器默认
+
+-->
+</body>
+<div>
+    <ul>
+        <li>
+            <p id="p1" class="para">我是段落</p>
+        </li>
+    </ul>
+</div>
+</html>

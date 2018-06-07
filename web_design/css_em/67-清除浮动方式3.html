@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>67-清除浮动方式3</title>
+    <style>
+                *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: #f00;
+        }
+        .box2{
+            background-color: #0f0;
+            /*clear:left;*/
+            /*margin-top: 100px;*/
+        }
+        .box1 p{
+            width: 100px;
+            background-color: #00f;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+        }
+        .wall{
+            clear: both;
+        }
+        .h20{
+            height: 20px;
+        }
+        p{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+清除浮动的第三种方式：隔墙法
+1外墙法：
+    在两个盒子之间设置一个额外的块级元素
+    在设置clear属性
+    注意点：外墙法可以让第二个盒子box2使用margin-top属性，但不能让第一个盒子box1使用margin-bottom
+
+2内墙法：
+    就是把额外的元素加在第一个盒子里
+
+    注意点：内墙法可以让第二个盒子box2使用margin-top属性，也能让第一个盒子box1使用margin-bottom
+
+
+外墙法内墙法的区别：
+内墙法可以撑起第一个盒子的高度，而外墙法不可以撑起第一个盒子的高度，其实内墙法在第一个盒子里面加了元素
+
+企业开发中不常用隔墙法清除浮动，原因是墙相当于设置样式，不利于结构与样式分离
+
+-->
+<div class="box1">
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+    <p class="para1">我是文字1</p>
+    <!--内墙-->
+    <div class="wall h20"></div>
+</div>
+<!--外墙-->
+<!--<div class="wall h20"></div>-->
+<div class="box2">
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+    <p class="para2">我是文字2</p>
+</div>
+</body>
+</html>

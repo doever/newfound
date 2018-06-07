@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-多物体多定时器</title>
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: #f00;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementsByTagName('div');
+            for(var i=0;i<oDiv.length;i++){
+                //给所有的div元素加上属性timer
+                oDiv[i].timer=null;
+                oDiv[i].onmouseover=function(){
+                    startmove(this,400);
+                };
+                oDiv[i].onmouseout=function(){
+                    startmove(this,100);
+                }
+            }
+        };
+        function startmove(obj,iTar){
+            clearInterval(obj.timer);
+            obj.timer=setInterval(function(){
+                var speed=(iTar-obj.offsetWidth)/6;
+                speed=speed>0?Math.ceil(speed):Math.floor(speed);
+                if(obj.offsetWidth==iTar){
+                    clearInterval(obj.timer);
+                }
+                else{
+                    obj.style.width=obj.offsetWidth+speed+'px';
+                }
+            },30)
+        }
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

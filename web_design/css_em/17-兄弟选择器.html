@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17-兄弟选择器</title>
+    <style>
+        /*所有紧跟h1的第一个元素，必须是紧跟*/
+        /*h1+p{*/
+            /*color:red;*/
+        /*}*/
+        /*通用兄弟选择器*/
+        h1~p{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.直接兄弟选择器
+使用+号，紧跟的第一个元素
+2.通用兄弟选择器
+使用~
+-->
+<h1>我是标题</h1>
+<a href="#">百度一下</a>
+<p>我是段落</p>
+<p>我是段落</p>
+<h1>我是标题2</h1>
+<p>我是段落</p>
+<p>我是段落</p>
+</body>
+</html>
